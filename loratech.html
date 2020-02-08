@@ -37,17 +37,6 @@
 </nav>
 
 
-<br>
-
-<style>
-  .jumbotron{
-    background: rgba(255,255,255,0.8);
-  }
-  body{
-    background: url();
-  }
-
-</style>
 
 <!-- Jumbotron -->
 <div class="container">
@@ -57,7 +46,8 @@
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
   <hr class="my-4">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  
+  <p>We are at: <span id="location"></span></p>
+
 
 
 
@@ -79,7 +69,7 @@
         <form action="admin.html">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="@email.com">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
@@ -107,32 +97,12 @@
 
 </div>
 
-<style>
-  .parallax {
-    /* The image used */
-    background-image: url("img_parallax.jpg");
-  
-    /* Set a specific height */
-    height: 500px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  </style>
-  
-  <!-- Container element -->
-  <div class="parallax"></div> 
-
-
-
-
-
-
-
-
+<!-- devdut -->
+<script type="text/javascript" src="location.json"></script>
+<script type="text/javascript">
+  location = JSON.parse(text);
+  document.getElementById("location").innerHTML = location.lat;
+</script>
 
   </body>
 </html>
