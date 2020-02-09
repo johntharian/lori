@@ -3,10 +3,10 @@
 let router = require('express').Router();
 // Set default API response
 let bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.urlencoded({ extended: true }));
 dat={
-    lat:"00",
-    long:"00"
+    "lat":"00",
+    "long":"00"
 };
 
 router.get('/get', function (req, res) {
@@ -14,8 +14,9 @@ router.get('/get', function (req, res) {
 });
 
 router.post('/post', function (req,res){
-        var dat[lat]=req.body.lat;
-        var dat[long]=req.body.long;
+        console.log(req.body);
+        var h=req.body.lat;
+        var g=req.body.long;
 })
 // Export API routes
 module.exports = router;
