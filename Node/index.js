@@ -23,14 +23,17 @@ MongoClient.connect('mongodb+srv://adi:adi@lori-ebbbl.mongodb.net/test?retryWrit
 //app.use('/api', apiRoutes)
 app.post('/post', function (req,res){
      db.collection('lori').save(req.body, (err, result) => {
-          if (err) return console.log(err)
+         if (err) return console.log(err)
       
-          console.log('saved to database')
-          res.redirect('/')
+          res.send('saved to database'+req.body)
+          //res.redirect('/')
         })
  })
 app.get('/get', function (req, res) {
-     res.json(dat);
+     db.collection('quotes').find().toArray(function(err, results) {
+          res.send(results)
+          // send HTML file populated with quotes here
+        })
  });
 
  
