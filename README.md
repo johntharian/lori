@@ -16,6 +16,7 @@ Here we attempt to overcome both such issues, by proposing an Emergency Communic
 # How to use our website
 log in from the index page -> in the admin page, select the nodes with green blip.
 
-
+# Youtube link:
+https://youtu.be/GhQmxzeg5oc
 
 
